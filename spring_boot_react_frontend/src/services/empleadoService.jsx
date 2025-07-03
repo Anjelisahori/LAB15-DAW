@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/v1/empleados';
+// Usamos una variable de entorno para apuntar correctamente al backend
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/v1/empleados`;
 
 export const obtenerEmpleados = async () => {
   const response = await axios.get(API_URL);
